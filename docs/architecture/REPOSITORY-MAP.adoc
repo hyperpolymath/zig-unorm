@@ -117,10 +117,6 @@ predecessors did.
 | yes
 | -
 
-| `archetypes/`
-| optional
-| template-only variation seam (ADR-0003); `just repo-init` removes it from minted repos
-
 | `benches/`
 | optional
 | Cargo-conventional at package root
@@ -161,10 +157,6 @@ predecessors did.
 | yes
 | the toolchain: every tool at latest (PROVISIONING-STANDARD §4)
 
-| `rsr-template-repo_chora.deed`
-| yes
-| the repo deed: universal AI entry point; family-7 allocation manifest + ply tree folded in (standards#837 pilot). Filename carries the repo slug (deed dispatch <stem>_chora.deed), so repo-init renames it at mint
-
 | `scripts/`
 | yes
 | repo helper scripts
@@ -192,6 +184,10 @@ predecessors did.
 | `www/`
 | yes
 | site-operations bundle; canonical .well-known/ lives at www/.well-known/ (issue #53)
+
+| `zig-unorm_chora.deed`
+| yes
+| the repo deed: universal AI entry point; family-7 allocation manifest + ply tree folded in (standards#837 pilot). Filename carries the repo slug (deed dispatch <stem>_chora.deed), so repo-init renames it at mint
 
 |===
 
