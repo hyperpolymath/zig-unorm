@@ -22,9 +22,9 @@ import? "build/contractile.just"
 mod provision 'build/just/provision.just'
 
 # Project metadata — customize these
-project := "rsr-template-repo"
+project := "zig-unorm"
 OWNER := "hyperpolymath"
-REPO := "rsr-template-repo"
+REPO := "zig-unorm"
 version := "0.1.0"
 tier := "infrastructure"  # 1 | 2 | infrastructure
 
@@ -51,7 +51,7 @@ help recipe="":
 
 # Show this project's info
 info:
-    @echo "Project: {{project}}"
+    @echo "Project: zig_unorm"
     @echo "Version: {{version}}"
     @echo "RSR Tier: {{tier}}"
     @echo "Recipes: $(just --summary | wc -w)"
@@ -228,7 +228,7 @@ run-verbose: run
 
 # Install to user path
 install: build-release
-    @echo "Installing {{project}}..."
+    @echo "Installing zig_unorm..."
     # TODO: Replace with your install command
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -320,7 +320,7 @@ cookbook:
     #!/usr/bin/env bash
     mkdir -p docs
     OUTPUT="docs/just-cookbook.adoc"
-    echo "= {{project}} Justfile Cookbook" > "$OUTPUT"
+    echo "= zig_unorm Justfile Cookbook" > "$OUTPUT"
     echo ":toc: left" >> "$OUTPUT"
     echo ":toclevels: 3" >> "$OUTPUT"
     echo "" >> "$OUTPUT"
@@ -346,10 +346,10 @@ cookbook:
 man:
     #!/usr/bin/env bash
     mkdir -p docs/man
-    cat > docs/man/{{project}}.1 << EOF
-    .TH {{project}} 1 "$(date +%Y-%m-%d)" "{{version}}" "{{project}} Manual"
+    cat > docs/man/zig_unorm.1 << EOF
+    .TH zig_unorm 1 "$(date +%Y-%m-%d)" "{{version}}" "zig_unorm Manual"
     .SH NAME
-    {{project}} \- RSR-compliant project
+    zig_unorm \- RSR-compliant project
     .SH SYNOPSIS
     .B just
     [recipe] [args...]
@@ -358,7 +358,7 @@ man:
     .SH AUTHOR
     $(git config user.name 2>/dev/null || echo "Author") <$(git config user.email 2>/dev/null || echo "email")>
     EOF
-    echo "Generated: docs/man/{{project}}.1"
+    echo "Generated: docs/man/zig_unorm.1"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # CI & AUTOMATION
@@ -408,7 +408,7 @@ import? "build/just/validate.just"
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Repo state lives in the repo deed's (status …) and (maturity …) clauses
-# (rsr-template-repo#209); the journal is docs/status/ROADMAP.adoc. There is
+# (zig-unorm#209); the journal is docs/status/ROADMAP.adoc. There is
 # no last-updated stamp to touch: git log is the record of when it changed.
 
 # Show the lifecycle phase and maturity from the repo deed
@@ -574,7 +574,7 @@ opsm: provision::opsm
 
 # Guided tour of key features
 tour:
-    @echo "=== rsr-template-repo Tour ==="
+    @echo "=== zig-unorm Tour ==="
     @echo ""
     @echo "1. Project structure:"
     @ls -la
@@ -589,12 +589,12 @@ tour:
 
 # Open feedback channel with diagnostic context
 help-me:
-    @echo "=== rsr-template-repo Help ==="
+    @echo "=== zig-unorm Help ==="
     @echo "Platform: $(uname -s) $(uname -m)"
     @echo "Shell: $SHELL"
     @echo ""
     @echo "To report an issue:"
-    @echo "  https://github.com/hyperpolymath/rsr-template-repo/issues/new"
+    @echo "  https://github.com/hyperpolymath/zig-unorm/issues/new"
     @echo ""
     @echo "Include the output of 'just doctor' in your report."
 
